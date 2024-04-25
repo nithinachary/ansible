@@ -1,0 +1,9 @@
+- name: create instance
+  hosts: localhost
+  gather_facts: False
+
+  tasks:
+    - name: Task1 Creating an instance
+      amazon.aws.ec2_instance:
+        image_id: ami-0395649fbe870727e
+        instance_type: t2.micro
